@@ -1,22 +1,20 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
+  const [quote, setQuote] = useState('');
+
+  useEffect(() => {
+    fetch('https://vitamin10-backend.onrender.com/api/quote')
+      .then((res) => res.json())
+      .then((data) => setQuote(data.quote))
+      .catch((err) => console.error('Error fetching quote:', err));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>{quote ? quote : 'Loading quote...'}</p>
       </header>
     </div>
   );
