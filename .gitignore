@@ -1,18 +1,14 @@
-# Node modules
-frontend/node_modules/
+# React frontend
+node_modules/
+build/
+dist/
 
-# Build output
-frontend/build/
-
-# Python virtual environment
+# Python backend
 venv/
-
-# Python cache
 __pycache__/
 *.pyc
 
-# OS-specific files
+# OS and IDE junk
 .DS_Store
-
-# Environment variables
+.vscode/
 .env
