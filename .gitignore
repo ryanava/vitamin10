@@ -1,1 +1,18 @@
-/frontend/node_modules/
+# Node modules
+frontend/node_modules/
+
+# Build output
+frontend/build/
+
+# Python virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS-specific files
+.DS_Store
+
+# Environment variables
+.env
