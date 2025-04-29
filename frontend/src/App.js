@@ -5,7 +5,7 @@ function App() {
   const [quote, setQuote] = useState('');
 
   useEffect(() => {
-    fetch('https://vitamin10-backend.onrender.com/api/quote')
+    fetch('https://vitamin10-backend.onrender.com/api')
       .then((res) => res.json())
       .then((data) => setQuote(data.quote))
       .catch((err) => console.error('Error fetching quote:', err));
